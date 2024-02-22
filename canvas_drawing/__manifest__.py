@@ -16,7 +16,7 @@
     'price':'20.0',
     'currency':'USD',
     'depends': ['base','sale'],
-
+    "license": "LGPL-3",
     'data': [
         'security/ir.model.access.csv',
         'views/canvas_views.xml',  
