@@ -33,7 +33,7 @@
             'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css',
         ],
     },
-    "images":['/static/description/banner.gif'],
+    "images":['static/description/banner.gif'],
     "application": True,
     "installable": True,
 }
