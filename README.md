@@ -1,0 +1,2 @@
+# odooapps
+Odoo Canvas Drawing
