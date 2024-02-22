@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    
+        <record id="action_odoo_canvas_drawing" model="ir.actions.client">
+            <field name="name">Canvas Drawing</field>
+            <field name="tag">owl.OdooServices</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="drawing_action">
+            <field name="name">New Drawing</field>
+            <field name="res_model">drawing</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create the new item !
+                </p>
+            </field>
+        </record>
+        <record id="drawing_tree" model="ir.ui.view">
+            <field name="name">drawing.tree</field>
+            <field name="model">drawing</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Drawings">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <record id="drawing_form" model="ir.ui.view">
+        <field name="name">drawing.form</field>
+        <field name="model">drawing</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <header>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" />
+                            </group>
+                            <group>
+                                 <button name="%(canvas_drawing.action_odoo_canvas_drawing)d" type="action" class="oe_stat_button" icon="fa-paint-brush">
+                                    <div class="o_field_widget o_stat_info">
+                                        <span class="o_stat_text">Paint </span>
+                                        <span class="o_stat_text">Drawing</span>
+                                    </div>
+                                </button>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="drawing" string="Drawing">
+                                <field name="image" />
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <menuitem name="Canvas Drawing" id="drawing_main_menu" action="drawing_action" web_icon="canvas_drawing,static/description/canvas.png" sequence="3"/> 
+    </data>
+</odoo>
