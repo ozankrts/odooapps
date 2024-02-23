@@ -13,7 +13,7 @@
     'version': '15.0.1',
     'sequence': -10,
     'maintainer':'Ozan',
-    'price':'20.0',
+    'price':'13.0',
     'currency':'USD',
     'depends': ['base','sale'],
     "license": "LGPL-3",
